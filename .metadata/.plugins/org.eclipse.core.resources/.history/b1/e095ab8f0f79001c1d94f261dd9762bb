@@ -1,0 +1,21 @@
+package superkeyword;
+
+public class Airplane {
+	// 비행기는 속도를 가집니다.
+	protected int speed;
+	
+	// 생성자는 속도를 입력받아 저장해줍니다.
+	public Airplane(int speed) {
+		this.speed = speed;
+	}
+	
+	// fly()메서드를 정의하는데 속도가 500씩 붙습니다.
+	// 단, 일반 비행기는 속도가 900 초과일 수 없습니다.
+	public void fly() {
+		this.speed += 500;
+		if (this.speed > 900) {
+			this.speed = 900;
+		}
+	}
+
+}
