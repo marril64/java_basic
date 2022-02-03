@@ -25,16 +25,30 @@ public class String03P399 {
 		int count = 0;
 		
 		// 검출용 for문 작성
-		for (int i = 0; i < longString.length(); i++) {
+		for (int i = 0; i < longString.length(); i++) { // 한바퀴 돌고 나서 마지막으로 발견한 지점에 1 증가하고 시작
+			
+			// 인덱스 찾기
 			int a = longString.indexOf(shortString, i);
-			System.out.println(a + "번 인덱스에서 " + (i + 1) + "번째 " + shortString + " 이(가) 검출되었습니다.");
+			
+			// 원하는 단어가 나오지 않을 경우 더이상 for문을 돌릴 필요가 없다.
+			if (a == -1) {
+				break;
+			}
+			
+			// if문을 통과하면 찾는 단어가 있다는 뜻이므로 count 1 증가
 			count += 1;
-			i += longString.indexOf(shortString, i); // i 설정 잘해야겠다...
+			
+			// 원하는 문장을 마지막으로 발견한 지점을 i에 저장
+			i = longString.indexOf(shortString, a);
+			
+			// 중간과정 콘솔에 출력
+			System.out.println(a + "번 인덱스에서 " + count + "번째 " + shortString + " 이(가) 검출되었습니다.");
+			
 		}
 		
-		// 결론
+		// 결론 콘솔에 출력
 		System.out.println(shortString + "의 총 출현 횟수는 " + count + "입니다.");
 
-	}
+	} // while문 꼭 써보쟈
 
 }
