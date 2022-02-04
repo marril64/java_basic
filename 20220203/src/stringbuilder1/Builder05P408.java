@@ -14,11 +14,17 @@ public class Builder05P408 {
 		
 		System.out.println(a);*/
 		
+		/*for (int i = 0; i < a.length(); i++) {
+			if (i % 3 == 0) {
+				a.deleteCharAt(i);
+			}
+		}*/
+		
 		for (int i = 0; i < a.length(); i++) {
 			if (i == 0) {
 				a.deleteCharAt(i);
-			} else if ((i + 1) % 3 == 0) {
-				a.deleteCharAt(i);
+			} else if ((i + 1) % 2 == 0) {
+				a.deleteCharAt(i + 1);
 			}
 		}
 		
