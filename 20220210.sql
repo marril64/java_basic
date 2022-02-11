@@ -55,7 +55,7 @@ INSERT INTO library VALUES ('지옥의 메카니컬 드럼 트레이닝', 13500,
 SELECT * FROM library;
 -- 실수로 다른곳에 library 테이블을 생성했다면 drop table library를 사용하면 library 테이블 자체가 삭제된다.
 -- 테이블을 일괄적으로 날려버리는 명령어
-drop table library;
+drop table userTbl;
 
 -- employees를 사용 스키마로 지정해주세요.(명령어로)
 use employees;
